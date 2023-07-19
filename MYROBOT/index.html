@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+  </style>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="section-1">
+    <div class="top-page">
+      <a class="logo" href="#"> </a>
+      <a>
+        <div class="menu" onclick="turnSideMenuOn()">
+          <img class="toppage_ico" src="menu.png" alt="" />
+          <p class="top-page-text">Menu</p>
+        </div>
+      </a>
+      <form class="search-bar">
+        <div id="search-bar-category" class="search-bar_category" onclick="turnSearchBarCategoryOn()">
+            All<i id="search-bar-icon" class="fa fa-angle-down" aria-hidden="true"  style="font-size: 0.9em; margin: 0 5px 0 5px;"></i>
+          <div class="category">
+            <ul>
+              <li><a onclick="selectCategory()">All Departments</a></li>
+              <li><a onclick="selectCategory()">Housekeeper Robot</a></li>
+              <li><a onclick="selectCategory()">Housekeeper Robot</a></li>
+              <li><a onclick="selectCategory()">Housekeeper Robot</a></li>
+              <li><a onclick="selectCategory()">Housekeeper Robot</a></li>
+              <li><a onclick="selectCategory()">Housekeeper Robot</a></li>
+              <li><a onclick="selectCategory()">Housekeeper Robot</a></li>
+              <li><a onclick="selectCategory()">Housekeeper Robot</a></li>
+              <li><a onclick="selectCategory()">Housekeeper Robot</a></li>
+              <li><a onclick="selectCategory()">Housekeeper Robot</a></li>
+            </ul>
+          </div>
+        </div>
+        <input id="search-bar-type" onclick="enterKeyWord()" type="text" value="" class="search-bar_type" placeholder="Search" aria-label="Search "
+          autocapitalize="off" autocorrect="off" />
+
+        <button id="" type="submit" aria-label="" class="search-bar_button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ipc-icon ipc-icon--magnify"
+            id="iconContext-magnify" viewBox="0 0 24 24" fill="currentColor" role="presentation">
+            <path fill="none" d="M0 0h24v24H0V0z"></path>
+            <path
+              d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+            </path>
+          </svg>
+        </button>
+      </form>
+      <div class="account">
+        <img class="toppage_ico" src="person.png" alt="" />
+        <p class="top-page-text">Account</p>
+      </div>
+      <div class="support">
+        <img class="toppage_ico" src="support.png" alt="" />
+        <p class="top-page-text">Support</p>
+      </div>
+      <div class="cart">
+        <img class="toppage_ico" src="shopping_cart.png" alt="" />
+        <p class="top-page-text">Cart</p>
+      </div>
+    </div>
+    <div class="top-recommend">
+      <a class="top-recommend_item" href="#">Best seller</a>
+      <a class="top-recommend_item" href="#">Today's deal</a>
+      <a class="top-recommend_item" href="#">Brand new item</a>
+      <a class="top-recommend_item" href="#">TECH-News</a>
+    </div>
+  </div>
+  <div class="black-cover">
+  </div>
+  <div class="side-menu-box">
+    <a class="close-side-menu" onclick="turnSideMenuOff()">
+      <span><i class="fa fa-times" aria-hidden="true"></i></span>
+    </a>
+    <div class="side-menu">
+
+      <div class="account-menu">
+        <div class="sign-in">
+          <a href="">
+            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+            <span>Sign in</span>
+          </a>
+        </div>
+        <h3 style="font-size: 1.2em;">Browse</h3>
+        <h3>Myrobot</h3>
+      </div>
+      <div class="home-menu">
+        <span style="float: left;">Myrobot Home</span>
+        <span style="float: right;"><i class="fa fa-home" aria-hidden="true"></i></span>
+      </div>
+      <div class="home-menu" style="height: 470px;">
+        <span>Category</span>
+        <a href="">
+          <p>Housekeeper Robot<i class="fa fa-angle-right" style="float: right;margin-top: 3px; color: #111;"
+              aria-hidden="true"></i></p>
+        </a>
+        <a href="">
+          <p>Contructor Robot<i class="fa fa-angle-right" style="float: right;margin-top: 3px; color: #111;"
+              aria-hidden="true"></i></p>
+        </a>
+        <a href="">
+          <p>Robot for Kid<i class="fa fa-angle-right" style="float: right;margin-top: 3px; color: #111;"
+              aria-hidden="true"></i></p>
+        </a>
+        <a href="">
+          <p>Robot's Accessories<i class="fa fa-angle-right" style="float: right;margin-top: 3px; color: #111;"
+              aria-hidden="true"></i></p>
+        </a>
+        <a href="">
+          <p>Houseware's Accessories<i class="fa fa-angle-right" style="float: right;margin-top: 3px; color: #111;"
+              aria-hidden="true"></i></p>
+        </a>
+        <a href="">
+          <p>Network's Accessories<i class="fa fa-angle-right" style="float: right;margin-top: 3px; color: #111;"
+              aria-hidden="true"></i></p>
+        </a>
+        <a href="">
+          <p>Blueprint & Tools<i class="fa fa-angle-right" style="float: right;margin-top: 3px; color: #111;"
+              aria-hidden="true"></i></p>
+        </a>
+        <a href="">
+          <p>3D Printer<i class="fa fa-angle-right" style="float: right;margin-top: 3px; color: #111;"
+              aria-hidden="true"></i></p>
+        </a>
+      </div>
+      <div class="home-menu" style="height: 300px; border: none;">
+        <span>Help Center</span>
+        <a href="">
+          <p><span style="margin-right: 10px; "><i class="fa fa-newspaper-o" aria-hidden="true"></i></span>TECH-News</p>
+        </a>
+        <a href="">
+          <p><span style="margin-right: 20px; margin-left: 5px;"><i class="fa fa-info"
+                aria-hidden="true"></i></span>About us</p>
+        </a>
+        <a href="">
+          <p><span style="margin-right: 10px;"><i class="fa fa-bell-o" aria-hidden="true"></i></span>Help & FAQ</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="section-2">
+    <div class="category-list">
+      <div class="category-list_title">
+        <img class="title-icon" src="image/category.png" alt="">
+        <p class="title-text">CATEGORY</p>
+      </div>
+      <a class="categoty-item">
+        <img class="category-item_icon" src="image/robot-vacuum.png" alt="">
+        <p class="category-item_text">HOUSEKEEPER ROBOT</p>
+      </a>
+      <a class="categoty-item">
+        <img class="category-item_icon" src="image/robotic-arm.png" alt="">
+        <p class="category-item_text">CONSTRUCTOR ROBOT</p>
+      </a>
+      <a class="categoty-item">
+        <img class="category-item_icon" src="image/android.png" alt="">
+        <p class="category-item_text">ROBOT FOR KID</p>
+      </a>
+      <a class="categoty-item">
+        <img class="category-item_icon" src="image/android-piece.png" alt="">
+        <p class="category-item_text">ROBOT ACCESSORIES</p>
+      </a>
+      <a class="categoty-item">
+        <img class="category-item_icon" src="image/driller.png" alt="">
+        <p class="category-item_text">HOUSERWARE ACCESSORIES</p>
+      </a>
+      <a class="categoty-item">
+        <img class="category-item_icon" src="image/wires.png" alt="">
+        <p class="category-item_text">NETWORK ACCESSORIES</p>
+      </a>
+      <a class="categoty-item">
+        <img class="category-item_icon" src="image/motor.png" alt="">
+        <p class="category-item_text">BLUEPRINTS & TOOLS </p>
+      </a>
+      <a class="categoty-item">
+        <img class="category-item_icon" src="image/printer.png" alt="">
+        <p class="category-item_text">3D PRINTER </p>
+      </a>
+    </div>
+    <div class="main-banner">
+      <div class="main-banner_link">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="image/mainbanner1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="image/mainbanner2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="image/mainbanner1.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="main-banner_brand">
+        <a href="" class="brand-link">
+          <img src="image/samsung.png" alt="" class="brand-thumbnail">
+          <p class="brand-text">Samsung</p>
+        </a>
+        <a href="" class="brand-link">
+          <img src="image/huyndai.jpg" alt="" class="brand-thumbnail">
+          <p class="brand-text">Huyndai</p>
+        </a>
+        <a href="" class="brand-link">
+          <img src="image/nachi.png" alt="" class="brand-thumbnail">
+          <p class="brand-text">Nachi</p>
+        </a>
+        <a href="" class="brand-link">
+          <img src="image/Epson.jpg" alt="" class="brand-thumbnail">
+          <p class="brand-text">Epson</p>
+        </a>
+        <a href="" class="brand-link">
+          <img src="image/sony.jpg" alt="" class="brand-thumbnail">
+          <p class="brand-text">Sony</p>
+        </a>
+        <a href="" class="brand-link">
+          <img src="image/fuka.png" alt="" class="brand-thumbnail">
+          <p class="brand-text">FUKA</p>
+        </a>
+        <a href="" class="brand-link">
+          <img src="image/samsung.png" alt="" class="brand-thumbnail">
+          <p class="brand-text">Samsung</p>
+        </a>
+        <a href="" class="brand-link">
+          <img src="image/samsung.png" alt="" class="brand-thumbnail">
+          <p class="brand-text">Samsung</p>
+        </a>
+        <a href="" class="brand-link">
+          <img src="image/samsung.png" alt="" class="brand-thumbnail">
+          <p class="brand-text">Samsung</p>
+        </a>
+        <a href="" class="brand-link">
+          <img src="image/huyndai.jpg" alt="" class="brand-thumbnail">
+          <p class="brand-text">Huyndai</p>
+        </a>
+        <a href="" class="brand-link">
+          <img src="image/nachi.png" alt="" class="brand-thumbnail">
+          brand </a>
+        <a href="" class="brand-link">
+          <img src="image/Epson.jpg" alt="" class="brand-thumbnail">
+          <p class="brand-text">Epson</p>
+        </a>
+      </div>
+    </div>
+    <div class="news-list">
+      <div class="category-list_title">
+        <img class="title-icon" src="image/tech-news-title.png" alt="">
+        <p class="title-text">TECH-News</p>
+      </div>
+      <div class="news-box">
+        <div class="news">
+          <img src="image/tech-new-thumbnail4.jpg" alt="" class="news-thumbnail">
+          <p class="news-text">Công nghệ nào đằng sau siêu phẩm "Avatar 2"?Máy quay, thuật toán, hàng trăm bản cắt tạo
+            nên những hình ảnh siêu thực của bộ phim Avatar: The Way of Water</p>
+        </div>
+        <div class="news">
+          <img src="image/tech-new-thumbnail1.jpg" alt="" class="news-thumbnail">
+          <p class="news-text">Robot bay vỗ cánh có thể đậu xuống thanh ngang bằng móng vuốt như chim</p>
+        </div>
+        <div class="news">
+          <img src="image/tech-new-thumbnail3.jpg" alt="" class="news-thumbnail">
+          <p class="news-text">Các nhà khoa học Nhật cấy ghép máy móc vào gián, bắt chúng phải phục vụ con người</p>
+        </div>
+        <div class="news">
+          <img src="image/tech-new-thumbnail2.jpg" alt="" class="news-thumbnail">
+          <p class="news-text">Máy bay cá nhân cất hạ cánh thẳng đứng giá 99.000 USD</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-3">
+    <div class="promotion-box" style="margin-right:10px;">
+      <div class="promotion-box_heading">
+        <a href="" class="heading-link"><img src="image/medal.png" alt="" class="heading-icon"> &#160; Best seller of
+          month</a>
+        <a href="" class="heading-more">More</a>
+      </div>
+      <div class="promotion-item_list">
+        <div class="sale-item">
+          <img src="image/sale-item1.jpg" alt="" class="sale-item_thumbnail">
+          <div class="sale-item_price">
+            <img src="image/price-background.png" alt="" class="sale-price-background">
+            <span class="sale-price">6.640.000₫</span>
+          </div>
+          <span class="sale-item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        </div>
+        <div class="sale-item" style="margin: 0 2% 0 2% ;">
+          <img src="image/sale-item2.jpg" alt="" class="sale-item_thumbnail">
+          <div class="sale-item_price">
+            <img src="image/price-background.png" alt="" class="sale-price-background">
+            <span class="sale-price">6.640.000₫</span>
+          </div>
+          <span class="sale-item-text">Máy in 3D FDM Neptune 3 </span>
+        </div>
+        <div class="sale-item sale-item-hide">
+          <img src="image/sale-item3.jpg" alt="" class="sale-item_thumbnail">
+          <div class="sale-item_price">
+            <img src="image/price-background.png" alt="" class="sale-price-background">
+            <span class="sale-price">6.640.000₫</span>
+          </div>
+          <span class="sale-item-text">MÁY RỬA VÀ SẤY ELEGOO MERCURY X BUNDLE </span>
+        </div>
+      </div>
+    </div>
+    <div class="promotion-box promotion-box-hide">
+      <div class="promotion-box_heading">
+        <a href="" class="heading-link"><img src="image/live.png" alt="" class="heading-icon"> &#160; New live
+          broadcast</a>
+        <a href="" class="heading-more">More</a>
+      </div>
+      <div class="promotion-item_list">
+        <a href="" class="live-1">
+          <span class="live-1-text-1">Purchasing samples</span>
+          <span class="live-1-text-2">Watch the live and choose the goods</span>
+        </a>
+        <a href="" class="live-2">
+          <span class="live-2-text-1">New live</span>
+          <span class="live-2-text-2">Daily news 1000+</span>
+        </a>
+      </div>
+    </div>
+    <div class="promotion-box" style="margin-right:10px;">
+      <div class="promotion-box_heading">
+        <a href="" class="heading-link"><img src="image/new-product.png" alt="" class="heading-icon"> &#160; New
+          product</a>
+        <a href="" class="heading-more">More</a>
+      </div>
+      <div class="promotion-item_list">
+        <div class="item">
+          <img src="image/sale-item4.jpg" alt="" class="item_thumbnail">
+          <span class="item-text">Robot mBot Ranger-Makeblock, lập trình ngôn ngữ Scracth, độ tuổi 8+ </span>
+          <span class="item-price">5.850.000₫</span>
+          <button class="add-item-button">
+          </button>
+        </div>
+        <div class="item" style="margin: 0 2% 0 2% ;">
+          <img src="image/sale-item5.jpg" alt="" class="item_thumbnail">
+          <span class="item-text">Robot Airblock Makeblock </span>
+          <span class="item-price">2.900.000₫</span>
+          <button class="add-item-button">
+          </button>
+        </div>
+        <div class="item promotion-box-hide">
+          <img src="image/sale-item6.png" alt="" class="item_thumbnail">
+          <span class="item-text">Robot Codey Rocky, Makeblock, lập trình Scratch & Python, độ tuổi 6+ </span>
+          <span class="item-price">3.150.000₫</span>
+          <button class="add-item-button">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="promotion-box">
+      <div class="promotion-box_heading">
+        <a href="" class="heading-link"><img src="image/only-today.png" alt="" class="heading-icon"> &#160; Today's
+          deal</a>
+        <a href="" class="heading-more">More</a>
+      </div>
+      <div class="promotion-item_list">
+        <div class="item">
+          <img src="image/sale-item2.jpg" alt="" class="item_thumbnail">
+          <span class="item-text">Máy in 3D FDM Neptune 3 </span>
+          <span class="item-price">6.640.000₫</span>
+          <button class="add-item-button">
+          </button>
+        </div>
+        <div class="item" style="margin: 0 2% 0 2% ;">
+          <img src="image/sale-item3.jpg" alt="" class="item_thumbnail">
+          <span class="item-text">MÁY RỬA VÀ SẤY ELEGOO MERCURY X </span>
+          <span class="item-price">6.640.000₫</span>
+          <button class="add-item-button">
+          </button>
+        </div>
+        <div class="item promotion-box-hide">
+          <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+          <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+          <span class="item-price">6.640.000₫</span>
+          <button class="add-item-button">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-4">
+    <div class="promotion-box_heading">
+      <a href="" class="heading-link"><img src="image/recommendation.png" alt="" class="heading-icon"> &#160; Recommend
+        for you</a>
+      <a href="" class="heading-more">More</a>
+    </div>
+    <div class="keyword-box">
+      <a href="" class="keyword">may hut bui</a>
+      <a href="" class="keyword">may in 3d</a>
+      <a href="" class="keyword">ban thiet ke</a>
+      <a href="" class="keyword">dung cu sua robot</a>
+      <a href="" class="keyword">3d printer</a>
+    </div>
+    <div class="recommned-item-box">
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+      <div class="item">
+        <img src="image/sale-item1.jpg" alt="" class="item_thumbnail">
+        <span class="item-text">Robot hút bụi lau nhà Dreame F9 </span>
+        <span class="item-price">6.640.000₫</span>
+        <button class="add-item-button">
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="section-5">
+    <div class="footer">
+      <div class="container1">
+        <div class="sec about-us">
+          <h2>About us</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut a
+            liquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+          </p>
+          <ul class="sci">
+            <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+        <div class="sec quick-links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="">About</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Help</a></li>
+            <li><a href="">Term & Condition</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+        <div class="sec contact">
+          <h2>Contact Info</h2>
+          <ul class="info">
+            <li>
+              <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+              <span>55 Giai Phong, Dong Tam, Hai Ba Trung <br>Ha Noi, VietNam</span>
+            </li>
+            <li>
+              <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+              <p><a href="tel:12345678900">+1 234 567 8900</a><br><a href="tel:12345678900">+1 234 567 8900</a></p>
+            </li>
+            <li>
+              <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+              <p><a href="mailto:dhxaydung@huce.edu.vn">dhxaydung@huce.edu.vn</a></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>
